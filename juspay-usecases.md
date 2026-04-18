@@ -38,7 +38,7 @@ For someone with your technical expertise, it’s worth noting that Juspay build
 | **HyperSense** | AIOps & Anomaly Detection | Real-time observability |
 
 
-References:
+# References:
 Alloy (2026) Financial fraud detection using machine learning. Available at: https://www.alloy.com/blog/data-and-machine-learning-in-financial-fraud-prevention (Accessed: 14 April 2026).
 
 Ganesh, A. (2024) ‘How can AI Ops in payment analytics solve cost observability for merchants?’, Juspay Blog, September. Available at: https://juspay.io/blog (Accessed: 14 April 2026).
