@@ -40,11 +40,18 @@ For someone with your technical expertise, it’s worth noting that Juspay build
 
 References:
 Alloy (2026) Financial fraud detection using machine learning. Available at: https://www.alloy.com/blog/data-and-machine-learning-in-financial-fraud-prevention (Accessed: 14 April 2026).
+
 Ganesh, A. (2024) ‘How can AI Ops in payment analytics solve cost observability for merchants?’, Juspay Blog, September. Available at: https://juspay.io/blog (Accessed: 14 April 2026).
+
 Juspay (2025) A control-theoretic approach to dynamic payment routing for success rate optimization. arXiv:2510.16735. Available at: https://arxiv.org/pdf/2510.16735 (Accessed: 14 April 2026).
+
 Juspay (2025) DOTP 2.0 - Seamless Card Payments. Available at: https://juspay.io/en-in/blog/dotp-2-0-seamless-card-payments (Accessed: 14 April 2026).
+
 Juspay (2026) Quick Pay - Juspay Developer Docs. Available at: https://juspay.io/sea/docs/quick-pay-sea/overview (Accessed: 14 April 2026).
+
 Kuppili, S. and Sharma, D. (2025) ‘Payment Orchestration: An Operating System for Streamlining Payments’, Juspay Blog, January. Available at: https://juspay.io/blog (Accessed: 14 April 2026).
+
 Mishra, M. (2026) ‘Agentic Commerce: Understanding the Shift and What It Means for the Payments Ecosystem’, Juspay Blog, January. Available at: https://juspay.io/blog (Accessed: 14 April 2026).
+
 ResearchGate (2022) An AI-powered Smart Routing Solution for Payment Systems. Available at: https://www.researchgate.net/publication/357815497_An_AI-powered_Smart_Routing_Solution_for_Payment_Systems (Accessed: 14 April 2026).
 | **QuickPay** | User preference modeling | 1.2x better success rates |
