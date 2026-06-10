@@ -64,3 +64,25 @@ CRED, Paytm, Capital One, and Stripe all use document classification and extract
 ---
 
 These three — **Graph Fraud**, **Credit Risk**, and **Document AI** — form what you could call the foundational ML triad in fintech. Every serious player has all three, and the differentiation is in the sophistication of execution rather than the choice of use case.
+
+
+----
+
+Intuit
+- Transaction fraud detection
+- Agent for payroll and tax
+- Guardrails to block prompt injection
+- Using Knowledge Graphs to link tax codes, user data, and financial regulations
+
+Meesho
+- Customer review summarisation
+- Fraud detection
+- Feed ranker
+- Voice driven shopping assistant
+- graph-based behavioral patterns to identify malicious seller networks
+- Search Intent Disambiguation: Traditional keyword matching fails when users type phonetic words (e.g., writing "chappal" instead of "slippers").
+
+MoEngage
+- Path optimisation
+- Product/offer recommendation across channels
+- Churn prediction and conversion propensity
