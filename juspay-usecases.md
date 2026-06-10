@@ -37,7 +37,77 @@ For someone with your technical expertise, it’s worth noting that Juspay build
 | **Failure Prediction** | Outage and downtime detection | 95% Prediction Accuracy |
 | **HyperSense** | AIOps & Anomaly Detection | Real-time observability |
 
+--
+The generic results aren't helpful. Let me search specifically for Juspay.Good enough to give a thorough, Juspay-specific answer. Let me compile it.
 
+Here's a breakdown of Juspay's AI/ML use cases, drawing from their engineering docs, product pages, and blog content:
+
+---
+
+## 1. Dynamic Gateway Routing — Multi-Armed Bandit / RL
+
+This is Juspay's most technically interesting ML use case. Dynamic gateway ordering is an alternative to rule-based ordering and inputs real-time success rates into consideration for each combination of payment instruments, type of transaction, network, platform, transaction origin country, etc. It leverages Reinforcement Learning and Statistical Distribution, and the problem of selecting the best gateway is mapped to a Non-stationary Multi-Armed Bandit (MAB) problem with Delayed Feedback, where each gateway is an "arm."
+
+The AI/ML algorithm constantly monitors and learns high payment failures across the payment ecosystem along with merchant context and makes fully automatic routing decisions. It is granular — taking into account all possible combinations of payment gateways and payment methods — platform-level, looking at global information across merchants, and real-time, identifying potential downtimes within a minute.
+
+**ML angle:** Non-stationary MAB with delayed rewards is a hard problem — authorization outcomes arrive seconds to minutes after routing decisions, and PSP failure patterns are non-stationary (sudden downtimes, issuer-specific outages). Contextual bandits with Thompson Sampling or UCB are common approaches here.
+
+---
+
+## 2. Smart Retries for Revenue Recovery
+
+Juspay's Revenue Recovery product minimizes churn using data and machine learning, and maximizes success rates with smart retry strategies with configurable retry logic.
+
+This is the subscription/recurring payments analog of what Stripe's Adaptive Acceptance does — an ML classifier that decides *when* and *how* to retry failed transactions (timing, channel, PSP selection) to maximize recovery probability without triggering issuer blocks.
+
+---
+
+## 3. ML-Driven Success Rate Optimization
+
+Success rate based routing uses ML-driven optimization that learns from authorization outcomes across PSPs and dynamically adjusts routing to maximize approval rates. This is distinct from the MAB routing — it's a supervised/semi-supervised model trained on historical authorization outcomes to predict the best PSP for a given transaction fingerprint.
+
+---
+
+## 4. HyperSense — AIOps for Payment Analytics
+
+HyperSense is an AI-driven payment analytics dashboard with features like anomaly detection, automated root cause analysis (RCA), and a conversational interface. It simplifies analysis of payment processing costs and trends and caters to various user personas — from CTOs and CFOs to data analysts — allowing each to view data from their unique perspective.
+
+HyperSense ingests unstructured, diversified payment reports from multiple sources and formats, transforming them into structured, actionable analytics output.
+
+**ML angle:** Anomaly detection over time-series payment metrics (success rates, latency, cost per transaction), automated RCA via causal inference or decision trees, plus an LLM-based conversational layer on top.
+
+---
+
+## 5. Adaptive 3DS Authentication
+
+Juspay's 3DS product uses ML to decide when to trigger strong authentication vs. request exemptions. Dynamic routing evaluates real-time signals including uptime, performance, card brand, geography, processing costs, time of day/week patterns, and fraud risk scores — no longer depending on if-then logic but adapting instantly to current conditions. Applied to 3DS, this translates to a risk-scoring model that determines frictionless vs. challenge flows, shifting liability while minimizing customer drop-off.
+
+---
+
+## 6. Agentic Commerce Infrastructure
+
+Juspay's leadership points to building guard rails for agentic commerce — where AI agents search, optimize costs, book entire trips, and handle payment end-to-end. The reference point is India's experience with Visa/Mastercard biometric authentication that set strict limits like transaction caps or frequency limits to build consumer confidence.
+
+This is an emerging area for them — the ML problems here involve agent intent verification, anomaly detection on agent-initiated transactions (versus human-initiated), and fraud scoring for non-human payment actors.
+
+---
+
+## Summary Table
+
+| Use Case | ML Technique | Business Metric |
+|---|---|---|
+| Dynamic Gateway Routing | Non-stationary MAB / RL | Authorization rate |
+| Smart Retries | Retry timing classifier | Revenue recovery |
+| Success Rate Optimization | Supervised ranking model | PSP approval rates |
+| HyperSense AIOps | Anomaly detection + LLM | Cost observability |
+| Adaptive 3DS | Risk scoring / binary classifier | Fraud vs. friction tradeoff |
+| Agentic Commerce | Anomaly detection, intent classification | Fraud prevention |
+
+---
+
+**From your positioning perspective:** Juspay's MAB routing engine, adaptive 3DS risk scoring, and HyperSense anomaly detection are all strong parallels to what you've built — the fraud GNN work, noise-robust loss functions, and the ATM replenishment optimization all map cleanly onto these problem spaces if you're benchmarking or targeting roles in this ecosystem.
+
+--
 # References:
 Alloy (2026) Financial fraud detection using machine learning. Available at: https://www.alloy.com/blog/data-and-machine-learning-in-financial-fraud-prevention (Accessed: 14 April 2026).
 
