@@ -1,6 +1,61 @@
 Stripe is widely considered one of the most sophisticated users of AI and Machine Learning in the fintech industry. Because they sit at the intersection of billions of transactions, they have a "network effect" of data that allows them to build models that are often more accurate than those of individual banks.
 
 Here are the primary AI/ML use cases at Stripe, categorized by their business impact:
+Here's a solid overview of Stripe's AI/ML use cases, organized by domain:
+
+---
+
+## Payments Core
+
+**Payments Foundation Model**
+Stripe has effectively built a "GPT for payments" — a foundation model trained on its massive transaction history. Earlier traditional ML models delivered a 15% uplift in conversion while reducing fraudulent transactions by 30%, but required heavy manual feature engineering. The new self-supervised foundation model is far more flexible.
+
+**Adaptive Acceptance / Authorization Boost**
+When a card gets a soft decline (vague or temporary reasons), Adaptive Acceptance uses ML to identify retryable transactions and dynamically retries them in real time — changing routing, formatting, etc. — without the customer noticing. In 2024, this recovered about $6 billion in payments that would have been lost, a 60% year-over-year improvement in retry success rates.
+
+Businesses using Authorization Boost can increase their acceptance rate by 3.8% on average, with some seeing up to 7%.
+
+---
+
+## Fraud Detection
+
+**Stripe Radar**
+Radar is Stripe's ML fraud-detection product, launched after extensive conversations with payments-fraud teams at high-volume merchants. It blocks $50B+ in fraudulent transactions annually.
+
+Radar has been learning from Stripe data for over a decade, continuously refining models as fraud and technology evolve — tweaking algorithms, testing which attributes are most relevant, and incorporating updated signals. This reduced dispute rates for Radar users by 17% last year, even as industry-wide ecommerce fraud increased 15%.
+
+---
+
+## Developer / Operational AI
+
+**Stripe Sigma (AI over payments data)**
+Sigma is Stripe's SQL-over-payments-data product, giving founders and finance teams self-serve query capability over their transaction data rather than relying on canned dashboards or engineering support.
+
+**AI-Assisted Integration**
+Stripe provides MCP (Model Context Protocol) server tooling that allows AI agents to interact directly with the Stripe API and search the knowledge base. They also publish "agent skills" — curated instructions for LLMs to build more accurate Stripe integrations.
+
+---
+
+## Agentic Commerce
+
+Stripe is building agentic commerce APIs and protocols that allow AI agents or software interfaces to embed commerce directly into user flows — enabling purchases on behalf of users with secure payment credentials, shared risk signals, and programmable authorization. This is targeted at use cases like "shop from chat" and agent-driven monetization.
+
+---
+
+## Monetization for AI Companies
+
+Stripe is also positioning itself as payment infrastructure *for* AI companies — supporting usage-based billing, outcome-based pricing, hybrid subscription+metered plans, and agent monetization models.
+
+---
+
+**From an ML systems perspective**, the interesting technical angles here are:
+- The **Payments Foundation Model** (self-supervised, trained on transaction sequences) is analogous to BERT/GPT-style pretraining on domain data — relevant to your financial services ML work.
+- **Adaptive Acceptance** is essentially a real-time retry classifier with multi-armed bandit-style optimization.
+- **Radar** is a classical fraud detection stack evolved into a deep learning ensemble with network-level graph signals.
+
+All three are strong analogues to problems you're already solving in your current stack.
+
+---
 
 ---
 
